@@ -14,10 +14,9 @@ function Dropmenu({ tags, children }) {
     setAnchorEl(null);
   };
 
-  const leave = (e) => {};
   return (
     <div>
-      <div onMouseEnter={handleClick}>{children}</div>
+      <div onClick={handleClick}>{children}</div>
       <Menu
         id="long-menu"
         MenuListProps={{

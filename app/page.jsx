@@ -30,10 +30,8 @@ export default function Home() {
           >
             <Link href={`games/${_id}`} className="bg-slate-200">
               <img src={image.url} alt={image.public_id} />
-              <div className="inset-0 absolute w-full h-full   bg-black/50  opacity-0 group-hover:opacity-100 ">
-                <h1 className=" w-full text-center text-2xl text-white h-full translate-y-[45%]">
-                  {title}
-                </h1>
+              <div className="inset-0 absolute flex items-center justify-center bg-black/50  opacity-0 group-hover:opacity-100  duration-150">
+                <h1 className=" text-2xl  text-white  ">{title}</h1>
               </div>
             </Link>
           </div>
