@@ -5,6 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 function Dropmenu({ tags, children }) {
   const ITEM_HEIGHT = 48;
+  const [activeTag, setActiveTag] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (e) => {
@@ -35,8 +36,11 @@ function Dropmenu({ tags, children }) {
         {tags?.map((option) => (
           <MenuItem
             key={option.name}
-            // selected={option === "Action"}
-            onClick={handleClose}
+            selected={option === activeTag}
+            onClick={() => {
+              handleClose;
+              setActiveTag(option.name);
+            }}
           >
             {option.name}
           </MenuItem>
