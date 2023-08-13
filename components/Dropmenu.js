@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useStateContext } from "@/context/store";
 
 function Dropmenu({ tags, children }) {
   const ITEM_HEIGHT = 48;
-  const [activeTag, setActiveTag] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
+  const { activeTag, setActiveTag } = useStateContext();
   const open = Boolean(anchorEl);
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -14,7 +15,6 @@ function Dropmenu({ tags, children }) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   return (
     <div>
       <div onClick={handleClick}>{children}</div>

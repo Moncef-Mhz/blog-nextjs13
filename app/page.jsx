@@ -2,12 +2,14 @@
 
 "use client";
 import Image from "next/image";
+import { useStateContext } from "@/context/store";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const { activeTag } = useStateContext();
   const [Articles, setArticles] = useState([]);
-
+  console.log(activeTag);
   // FETCCHING ARTICLES
   const fetchArticles = async () => {
     const articles = await fetch("api/blog");
