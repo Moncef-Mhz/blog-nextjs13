@@ -38,7 +38,7 @@ function Dropmenu({ tags, children }) {
             key={option.name}
             selected={option === activeTag}
             onClick={() => {
-              handleClose;
+              handleClose();
               setActiveTag(option.name);
             }}
           >

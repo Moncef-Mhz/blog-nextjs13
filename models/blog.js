@@ -3,7 +3,7 @@ import { Schema, model, models } from "mongoose";
 const ArticleSchema = new Schema(
   {
     title: { type: String, required: true },
-    tags: { type: [String], required: true, default: ["All"] },
+    tags: { type: [String], required: true, default: "All" },
     text: { type: String, required: true },
     image: {
       public_id: {
