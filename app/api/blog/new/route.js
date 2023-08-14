@@ -3,7 +3,7 @@ import { ConnectToDB } from "@/utils/db";
 import cloudinary from "@/utils/Cloudinary";
 
 export const POST = async (req) => {
-  const { title, tags, text, image } = await req.json();
+  const { title, tags, text, image, slug } = await req.json();
 
   try {
     const result = await cloudinary.uploader.upload(image, {
@@ -12,6 +12,7 @@ export const POST = async (req) => {
     await ConnectToDB();
     const newArtical = new Article({
       title,
+      slug,
       tags,
       text,
       image: {

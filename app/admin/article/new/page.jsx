@@ -33,10 +33,12 @@ function CreateArticle() {
     }
 
     try {
+      let slug = name.replace(" ", "-");
       const response = await fetch("/api/blog/new", {
         method: "POST",
         body: JSON.stringify({
           title,
+          slug,
           tags,
           text,
           image,

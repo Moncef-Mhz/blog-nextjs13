@@ -1,6 +1,6 @@
-import React from "react";
+"use client";
 
-function DetailsPage({ params }) {
+function DetailsPage({ params: { slug } }) {
   return <main className="px-10">Details page</main>;
 }
 
