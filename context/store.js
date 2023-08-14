@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const context = createContext();
 
 export const StateContext = ({ children }) => {
-  const [activeTag, setActiveTag] = useState("all");
+  const [activeTag, setActiveTag] = useState("All");
 
   return (
     <context.Provider value={{ activeTag, setActiveTag }}>
