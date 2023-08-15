@@ -8,7 +8,7 @@ async function Page({ params: { slug } }) {
   const article = await Article.findOne({ slug });
 
   return (
-    <main className="px-10">
+    <main className="px-5">
       <DetailsPage article={article} />
     </main>
   );

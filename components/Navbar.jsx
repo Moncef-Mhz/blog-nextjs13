@@ -19,7 +19,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full h-20 flex flex-row items-center justify-between relative px-10">
+    <nav className="w-full h-20 flex flex-row items-center justify-between relative px-5">
       <Link href="/" className="text-2xl font-bold">
         BLOG
       </Link>

@@ -78,7 +78,7 @@ function CreateArticle() {
             id="title"
             type="text"
             value={title}
-            placeholder="Title"
+            placeholder="For ex: Grand theft auto"
             onChange={(e) => setTitle(e.target.value)}
           />
           <label htmlFor="tags " className="text-xl px-5 mt-2">
@@ -89,21 +89,21 @@ function CreateArticle() {
             type="text"
             id="tags"
             value={tags}
-            placeholder="Tags"
+            placeholder="For ex: action,adventure"
             onChange={(e) => setTags(e.target.value)}
           />
           <label htmlFor="tags " className="text-xl px-5 mt-2">
-            Add description:
+            Add about the game:
           </label>
           <textarea
             className=" px-5 py-5 border rounded-md"
             type="text"
             value={text}
-            placeholder="desc"
+            placeholder="For ex: When a young street hustler..."
             onChange={(e) => setText(e.target.value)}
           />
           <label htmlFor="form4Example2" className="text-xl px-5 mt-2">
-            Add file:
+            Add thumbnail:
           </label>
           <input
             onChange={handleImage}
